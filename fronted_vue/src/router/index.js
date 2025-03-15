@@ -20,4 +20,8 @@ const router = createRouter({
   ],
 })
 
+router.beforeEach((to, from) => {
+  document.title = `My App - ${to.name.toUpperCase()}`
+})
+
 export default router

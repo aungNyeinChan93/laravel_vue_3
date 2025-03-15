@@ -2,6 +2,7 @@
 </script>
 
 <template>
-  <main>
-  </main>
+  <Master>
+    <p class="text-primary-100 ">home</p>
+  </Master>
 </template>

@@ -13,7 +13,20 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  // server: {
+  //   port: 4000,
+  // },
   server: {
     port: 4000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000/',
+        changeOrigin: true,
+        headers: {
+          Accept: 'application/json',
+          'content-type': 'application/json',
+        },
+      },
+    },
   },
 })
